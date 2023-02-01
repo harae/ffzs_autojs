@@ -31,6 +31,8 @@ const {
     createShell
 } = require('shell');
 
+const plugins = require("plugins");
+
 const getToken = new Deferred();
 
 global.datastore = createDatastore('./data.config');
@@ -78,9 +80,22 @@ async function main() {
         })
     }
 
+    // var thread = threads.start(function () {
+    //     while (true) {
+    //         log("子线程");
 
-    await float_window.main()
-    ui.startActivity(WebActivity)
+    //     }
+    // });
+
+    const alipay = await plugins.load("com.alipay.sdk.pay.demo");
+    let res = await alipay.pay("dsadsadsad")
+    
+    console.log(res);
+    // console.log(await alipay.remoteAdd(1, 2));
+
+
+    // await float_window.main()
+    // ui.startActivity(WebActivity)
 
 }
 
