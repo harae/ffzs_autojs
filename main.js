@@ -17,6 +17,8 @@ const float_window = require("./float.node.js");
 const fileUtil = require("./fileUtil")
 const config = require('./config/index.js')
 
+const plugins = require("plugins");
+
 const getToken = new Deferred();
 
 global.datastore = createDatastore('./data.config');
@@ -63,8 +65,23 @@ async function main() {
         })
     }
 
-    await float_window.main()
-    ui.startActivity(WebActivity)
+    // var thread = threads.start(function () {
+    //     while (true) {
+    //         log("子线程");
+
+    //     }
+    // });
+
+    const alipay = await plugins.load("com.alipay.sdk.pay.demo");
+    let res = await alipay.pay("dsadsadsad")
+    
+    console.log(res);
+    // console.log(await alipay.remoteAdd(1, 2));
+
+
+    // await float_window.main()
+    // ui.startActivity(WebActivity)
+
 }
 
 async function start() {
