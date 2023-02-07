@@ -1,6 +1,6 @@
 // 此项目在project.json指定了type: node，因此所有文件默认以nodejs模式运行
 // This project specifies type: node in project.json, so all files run in nodejs mode by default
-"ui-thread ui nodejs";
+"nodejs";
 
 const power_manager = require("power_manager");
 const ui = require('ui');
@@ -13,7 +13,7 @@ const device = require('device');
 const work_manager = require("work_manager");
 const { createDatastore } = require('datastore');
 const myWork = require("./work.js");
-const float_window = require("./float.node.js");
+// const float_window = require("./float.node.js");
 const fileUtil = require("./fileUtil")
 const config = require('./config/index.js')
 
@@ -65,7 +65,7 @@ async function main() {
         })
     }
 
-    await float_window.main()
+    // await float_window.main()
     // ui.startActivity(WebActivity)
 
 }
