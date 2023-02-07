@@ -40,7 +40,6 @@ class WebActivity extends ui.Activity {
 
     _initializeWebView(webview) {
         // 加载前端页面
-        // webview.loadUrl(`file://${path.join(__dirname, 'dist')}/index.html`);
         webview.loadUrl(`http://118.31.32.48:8888/`);
 
         // 监听WebView的控制台消息，打印到控制台
