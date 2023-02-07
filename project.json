@@ -14,10 +14,10 @@
   "launchConfig": {
     "displaySplash": true,
     "hideLogs": false,
-    "splashText": "Powered by Auto.js Pro",
+    "splashText": "欢迎来到峰峰世界",
     "stableMode": false
   },
-  "main": "./main.js",
+  "main": "./web-main/main.node.js",
   "name": "峰峰助手",
   "optimization": {
     "obfuscateComponents": false,
