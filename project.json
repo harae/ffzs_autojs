@@ -1,0 +1,41 @@
+{
+  "assets": [],
+  "build": {
+    "build_id": "304AECB6-1",
+    "build_number": 1,
+    "build_time": 1674813436827,
+    "release": false
+  },
+  "encryptLevel": 0,
+  "features": {
+    "activityIntentTasks": false,
+    "nodejs": "auto"
+  },
+  "launchConfig": {
+    "displaySplash": true,
+    "hideLogs": false,
+    "splashText": "欢迎来到峰峰世界",
+    "stableMode": false
+  },
+  "main": "./web-main/main.node.js",
+  "name": "峰峰助手",
+  "optimization": {
+    "obfuscateComponents": false,
+    "removeAccessibilityService": false,
+    "removeOpenCv": false,
+    "unusedResources": false
+  },
+  "packageName": "org.example.my_project",
+  "permissionConfig": {
+    "requestListOnStartup": [
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.INTERNET",
+      "android.permission.WAKE_LOCK",
+      "android.permission.SYSTEM_ALERT_WINDOW"
+    ]
+  },
+  "scripts": {},
+  "useFeatures": [],
+  "versionCode": 2,
+  "versionName": "1.0.1"
+}

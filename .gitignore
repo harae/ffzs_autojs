@@ -1,0 +1,8 @@
+node_modules
+dist
+.vscode
+.DS_Store
+.code-workspace
+*.DS_Storre
+.tar
+.zip
