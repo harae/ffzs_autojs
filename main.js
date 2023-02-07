@@ -66,11 +66,12 @@ async function main() {
     }
 
     await float_window.main()
-    ui.startActivity(WebActivity)
+    // ui.startActivity(WebActivity)
 
 }
 
-async function start() {
+async function start(token) {
+    global.token = token
     if (await myWork.vaildMember() != true) {
         showToast("你还不是会员，请充值会员")
         return
@@ -198,4 +199,7 @@ async function callAlipay(){
     }
 }
 
-main().catch(console.error);
+// main().catch(console.error);
+module.exports = {
+    start: start
+}

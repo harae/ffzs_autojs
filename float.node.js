@@ -19,7 +19,7 @@ async function main() {
   // 创建悬浮窗
   const window = createWindow({
     initialPosition: { x: 0, y: 100 },
-    initialSize: { width: 600, height: 300 }
+    initialSize: { width: 900, height: 500 }
   });
   // 从xml设置View
   window.setViewFromXml(`
@@ -28,7 +28,7 @@ async function main() {
                 <text text="峰峰助手: ${global.version}" textColor="#FF0000" textSize="10" />                
                 
             </row>
-            <globalconsole id="console" h="50" textSize="6"/>
+            <globalconsole id="console" h="100" textSize="6"/>
         </column>
     `);
   // <img id="dragHandle" src="@drawable/ic_drag_handle_black_48dp" margin="4 0" bg="?selectableItemBackground"/>
@@ -62,7 +62,7 @@ function focusableOnTouch(window) {
   let focusable = false;
   // 设置为FLAG_WATCH_OUTSIDE_TOUCH以便在外部触摸时可感知到
   // window.addFlags(FLAG_WATCH_OUTSIDE_TOUCH);
-  window.addFlags(FLAG_NOT_TOUCHABLE);
+  window.addFlags(FLAG_NOT_FOCUSABLE);
   // window.on('touch', event => {
   //   if (event.getAction() == MotionEvent.ACTION_DOWN && !focusable) {
   //     // 当悬浮窗被触摸时，移除不可聚焦标志位，即允许获取焦点
